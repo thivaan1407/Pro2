@@ -1,18 +1,15 @@
+CREATE TABLE student (
+    StudentID INT PRIMARY KEY,
+    StudentName VARCHAR(20) NOT NULL,
+    DOB DATE NULL,
+    Gender VARCHAR(10) NOT NULL,
+    DEPARTMENTID INT,
 
-create table student (
+    CONSTRAINT UQ_StudentName UNIQUE (StudentName),
 
-Student ID int (5) PRIMARY KEY, StudentName varchar(20) not null,
+    CONSTRAINT FK_department
+        FOREIGN KEY (DEPARTMENTID)
+        REFERENCES department (DEPARTMENTID)
+);
 
-DOB Date null,
-
-Gender varchar(10) Not null, DEPARTMENTID int(5),
-
-constraint UQ StudentName UNIQUE (StudentName),
-
-constraint FK department
-
-foreign key (DEPARTMENTID)
-
-references department (DEPARTMENTID) );
-
-desc student;
+DESC student;
