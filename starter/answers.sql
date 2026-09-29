@@ -1,3 +1,7 @@
+CREATE TABLE department (
+    DEPARTMENTID INT PRIMARY KEY,
+    DepartmentName VARCHAR(50) NOT NULL
+);
 CREATE TABLE student (
     StudentID INT PRIMARY KEY,
     StudentName VARCHAR(20) NOT NULL,
